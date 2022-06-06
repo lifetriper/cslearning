@@ -61,7 +61,8 @@ ssh-keygen -p   # 更改私钥的passphrase（密码）
 ![选择操作系统](../img/Lightsail_01.png)
 3. 在 Change SSH Key Pair 中选择 Upload New。将我们之前在笔记本上获得的密钥对的公钥 id_rsa.pub 上载到 
    AWS 中。这个公钥之后可以被其他的 Lightsail 服务器继续使用；
-![上载公钥](../img/Lightsail_02.png "上载公钥")
+
+   ![上载公钥](../img/Lightsail_02.png "上载公钥")
 4. 在 Choose your instance plan 中，选择适合自己的服务计划。我的选择是5美元的，拥有 1G 的内存，2TB 
    的网络传输流量，10% 的 CPU 速度，基本上可以满足我的日常使用。另外还可以给这个实例起一个名字。之后就可以选择建立自己的云服务器实例了。
 ![选择计划](../img/Lightsail_03.png "选择计划")
