@@ -48,6 +48,6 @@ ssh-keygen -p   # 更改私钥的passphrase（密码）
 2. 租用一个 LightSail 服务器，我个人建议租用5美元的服务器
 
 #### 租用一个静态的 IP 公网地址
-如下图：
+在 AWS 的 Lightsail 主页面中，选择 Networking，选择 Create Static IP。如下图：
 ![租用静态的IP公网地址](https://mydata01-gz-1254431113.cos.ap-guangzhou.myqcloud.
 com/web_pics/StaticIP_01.png "租用静态的IP公网地址")
