@@ -68,11 +68,26 @@ ssh-keygen -p   # 更改私钥的passphrase（密码）
 ![选择计划](../img/Lightsail_03.png "选择计划")
 5. 在 AWS 完成云服务器设置之后，我们还要将我们之前租用的 IP 地址分配给这个云服务器。
 ![管理服务器](../img/Lightsail_04.png "管理服务器")
-在 Networking 上，将我们之前租用的 IP 地址分配给这个服务就完成设置了。
+在 Networking 上，将我们之前租用的 IP 地址分配给这个服务器就完成设置了。
 ![分配静态IP地址](../img/Lightsail_05.png "分配静态IP地址")
 此外，需要注意的是，默认情况下 IPv4 Firewall 的 SSH 
-   设置是允许通过的。这个保证了我们下一步从远端（比如自己的笔记本）连接云服务器时，不会被防火墙阻挡。
+   设置是允许通过的。这个保证了我们下一步从远端（比如自己的笔记本）连接云服务器时，不会被防火墙阻挡。完成了我们以上的设置之后，我们就可以开始准备使用第一个自己的云服务器了。
 
-完成了我们以上的设置之后，我们就可以开始准备使用第一个自己的云服务器了。
+#### 远端连接云服务器
+为了方便以后连接云服务器，我们可以给这个云服务器设置一个和 IP 地址对应的名字，这个设置可以写在本地笔记本电脑上的 /etc/hosts 
+中。我给我的云服务器起的名字叫 cell201.als
+```bash
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+x.x.x.x         cell201.als
+```
+
 
 
