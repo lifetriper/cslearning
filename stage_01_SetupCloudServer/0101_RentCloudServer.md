@@ -88,6 +88,11 @@ ssh-keygen -p   # 更改私钥的passphrase（密码）
 ::1             localhost
 x.x.x.x         cell201.als
 ```
+之后使用 ssh 命令，连接远端服务器：
+```bash
+ssh ec2-user@cell201.als  # ec2-user 是安装 Amazon Linux 默认的用户
+```
+![连接远端服务器](../img/Lightsail_06.png "SSH连接远端服务器")
 
-
+ 至此，我们拥有了一台可以随时使用的远端服务器。
 
