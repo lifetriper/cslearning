@@ -21,3 +21,8 @@ chmod 600 authorized_keys  // 必须将authorized_keys的权限更改为 600
 
 #可以远程登录这部机器中
 ```
+
+### 配置主机名
+```bash
+sudo hostnamectl set-hostname webserver.localdomain
+```
