@@ -50,4 +50,5 @@ ssh-keygen -p   # 更改私钥的passphrase（密码）
 #### 租用一个静态的 IP 公网地址
 在 AWS 的 Lightsail 主页面中，选择 Networking，选择 Create Static IP。如下图：
 ![租用静态的IP公网地址](https://mydata01-gz-1254431113.cos.ap-guangzhou.myqcloud.com/web_pics/StaticIP_01.png "租用静态的IP公网地址")
+
 之后，可以在管理页面中，将这个申请的 IP 地址与一个具体的 Instance 相捆绑，这样这个实例就具有这个 IP 地址了。
