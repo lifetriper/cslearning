@@ -25,7 +25,7 @@
 #### 在本机上产生 ssh 密钥对
 以下 ssh-keygen 命令默认在 ~/.ssh 目录中生成 4096 位 SSH RSA 公钥和私钥文件。 如果当前位置存在 SSH 
 密钥对，这些文件将被覆盖。以 MacOS 为例，默认情况下，其中 id_rsa 为私钥，id_rsa.pub 为公钥。在 MacOS 上产生 ssh 
-密钥对的指令如下：
+密钥对的指令如下（在自己的笔记本电脑上执行）：
 ```bash
 ssh-keygen -m PEM -t rsa -b 4096
 ssh-keygen \
@@ -44,11 +44,22 @@ ssh-keygen -p   # 更改私钥的passphrase（密码）
 租用 AWS 的 Lightsail 云服务器实际上要做两件事情：
 1. 租用一个静态的 IP 公网地址。对于 AWS 来说，只要这个静态的 IP 
    公网地址是和一台服务器相关联的，用户就不用为这个公网地址付费。这样的好处是，就算我们租用的服务器重新启动，或者销毁重新租用其他的 
-   LightSail 服务器，我们都可以维持一个不变的公网 IP 地址；
+   Lightsail 服务器，我们都可以维持一个不变的公网 IP 地址；
 2. 租用一个 Lightsail 服务器，我个人建议租用5美元的服务器
 
 #### 租用一个静态的 IP 公网地址
 在 AWS 的 Lightsail 主页面中，选择 Networking，选择 Create Static IP。如下图：
+
 ![租用静态的IP公网地址](../img/StaticIP_01.png "租用静态的IP公网地址")
 
 之后，可以在管理页面中，将这个申请的 IP 地址与一个具体的 Instance 相捆绑，这样这个实例就具有这个 IP 地址了。
+
+#### 租用一个服务器实例(Instance)
+租用一个 Lightsail 服务器实例可以按照如下步骤执行：
+1. 在主页的 Instances 下，选择 Create Instance；
+2. 在 Select a platform 选择 Linux/Unix，选择 OS Only，选择 Amazon Linux 2；
+![选择操作系统](../img/Lightsail_01.png)
+3. 在 Change SSH Key Pair 中选择 Upload New。将我们之前在笔记本上获得的密钥对的公钥 id_rsa.pub 上载到 
+   AWS 中。这个公钥之后可以被其他的 Lightsail 服务器继续使用；
+![上载公钥](../img/Lightsail_02.png "上载公钥")
+4. 
